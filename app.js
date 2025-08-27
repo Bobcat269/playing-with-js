@@ -136,3 +136,65 @@ console.log(stoplight2('Yellow'));
 console.log(stoplight2('Red'));
 
 //Summary: function will return undefined unless an implicit return is provided.
+
+
+//Task: Write a for loop that iterates from 1 - 20 and logs out the square of each number.
+
+for ( i=1; i <21; i++) {
+    console.log(`The square of ${i} is ${i*i}.`);
+    
+}
+
+//Write a ternary that tells if a number is > 3
+
+let z = 3
+z > 3 ? console.log('z is greater than 3'): console.log('z is not greater than 3');
+
+//write a switch statement that returns seasons
+let seasonCheck = 'autumn'
+switch (seasonCheck) {
+    case 'summer':
+      console.log("It's summer!");
+      break;
+      //by not breaking below case 'autumn' we allow either of the cases that match to trigger the result: "It's fall now!"
+    case 'autumn':
+    case 'fall':
+      console.log("It's fall now!");
+      break;
+    case 'winter':
+      console.log('Brrr!');
+      break;
+    case 'spring':
+      console.log("It's spring!");
+      break;
+    default:
+      console.log('Invalid season');
+  }
+
+
+  //Basic while loop
+
+  let number = 1;
+
+while (number <= 10) {
+  console.log(number);
+  number++;
+}
+
+//do while
+let i = 120;
+
+do {
+  console.log(`${i} is even`);
+  i += 20;
+} while (i <= 10);
+
+//runs once, checks while, ceases running
+
+// || or operator returns the first truthy value while && and operator returns first falsy
+// in essence 1 || 0 || 2 returns 1
+// whereas 1 && 0 && 2 returns 0
+
+//if function getUsername() below returns an actual username i.e. the active user is logged in it will return their username.  
+//If the user is not logged in it will return 'Guest'
+const username = getUsername() || 'Guest';
