@@ -140,7 +140,7 @@ console.log(stoplight2('Red'));
 
 //Task: Write a for loop that iterates from 1 - 20 and logs out the square of each number.
 
-for ( i=1; i <21; i++) {
+for ( let i=1; i <21; i++) {
     console.log(`The square of ${i} is ${i*i}.`);
     
 }
@@ -197,4 +197,69 @@ do {
 
 //if function getUsername() below returns an actual username i.e. the active user is logged in it will return their username.  
 //If the user is not logged in it will return 'Guest'
-const username = getUsername() || 'Guest';
+//const username = getUsername() || 'Guest';
+
+
+//Refresher or arrow functions (the superior function form)
+
+//Instead of 
+//const addition = function(x,y) {
+//return x+y;
+//}
+//
+//We type.....
+const additon = (x,y) => {
+    return x+y;
+}
+
+//basically function(x,y) becomes (x,y) =>
+
+    //Exercise convert to an arrow function
+//     function square(num) {
+//   return num * num;
+// }
+
+const square = (x) => {
+    return x*x;
+}
+
+
+const sumTwoNumbers = (numA, numB) => {
+    return numA + numB;
+  }
+  
+  const sum = sumTwoNumbers(5, 10);
+
+
+//   What is the job of the sumTwoNumbers function? Sum two numbers
+
+//   Is numA a parameter or an argument? Param
+
+//   What will the value of numA be inside the sumTwoNumbers function? 5
+
+//   Will numA have a value outside of the sumTwoNumbers function? If it does, what will it be? No unless it is declared outside the function.
+
+//   What data type will the value returned from the sumTwoNumbers function be? int
+
+//   What will be returned from the sumTwoNumbers function? 15
+
+//   What would print to the console if we logged sum after the final line? 15
+
+//   How many arguments are passed to the sumTwoNumbers function? What are they? 2. 5 and 10.
+
+//   How many parameters does the sumTwoNumbers function accept? What are they? 2. numA and numB
+
+
+//Single expression arrow functions dont need the braces or return e.g.
+const multiply2 = (numA, numB) => numA *numB;
+
+//with a single param we dont even need the parens
+let n = 1;
+console.log(n);
+
+//const increment = num => num++; //apparently in JS ++ has to go before the number 
+const increment = num => ++num;
+
+n=increment(n);
+
+console.log(`me me me ${n}`);
